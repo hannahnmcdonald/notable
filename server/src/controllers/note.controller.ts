@@ -5,6 +5,7 @@ import { NoteService } from '../services/note.service'
 export class NoteController {
   constructor(private readonly noteService: NoteService) {}
 
+  // http get, fetches notes from note service
   @Get()
   @Render('index')
   findAll() {
