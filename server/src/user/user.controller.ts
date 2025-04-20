@@ -1,4 +1,11 @@
-import { Controller } from '@nestjs/common';
+import { Controller, HttpCode, HttpStatus, Post } from '@nestjs/common';
 
-@Controller('user')
-export class UserController {}
+@Controller('users')
+export class UserController {
+
+    @Post()
+    @HttpCode(HttpStatus.OK)
+    createUser(){
+        return "Success";
+    }
+}
